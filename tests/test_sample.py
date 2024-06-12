@@ -10,7 +10,7 @@ class TestSpaceXAPI(unittest.TestCase):
         response = requests.get(url)
         self.assertEqual(response.status_code, 200)
         data = response.json()
-        #checks to make sure that there is a response of a name, date, and a rocket that is used in the launch.
+        #checks to make sure that there is a response of a name, date, and a rocket that is used in the launch
         self.assertIn("name", data)
         self.assertIn("date_utc", data)
         self.assertIn("rocket", data)
